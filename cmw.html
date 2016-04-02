@@ -16,10 +16,11 @@
 
       var infowindow = new google.maps.InfoWindow();
 
+      var image = 'http://denniskhoo.github.io/photo.jpg'
       var reangDekMarker = new google.maps.Marker({
         position: new google.maps.LatLng(11.3273698, 105.2438272),
         map: map
-        icon: 'http://denniskhoo.github.io/photo.jpg'
+        icon: image
       });
 
       google.maps.event.addListener(reangDekMarker, 'click', (function(marker) {
