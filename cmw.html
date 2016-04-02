@@ -17,13 +17,13 @@
       var infowindow = new google.maps.InfoWindow();
 
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(45.8167, 15.9833),
+        position: new google.maps.LatLng(11.3273698, 105.2438272),
         map: map
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker) {
         return function() {
-          infowindow.setContent("Zagreb");
+          infowindow.setContent("Reang Dek Village");
           infowindow.open(map, marker);
         }
       })(marker));
