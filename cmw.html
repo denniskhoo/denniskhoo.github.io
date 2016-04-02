@@ -16,12 +16,12 @@
 
       var infowindow = new google.maps.InfoWindow();
 
-      var marker = new google.maps.Marker({
+      var reangDekMarker = new google.maps.Marker({
         position: new google.maps.LatLng(11.3273698, 105.2438272),
         map: map
       });
 
-      google.maps.event.addListener(marker, 'click', (function(marker) {
+      google.maps.event.addListener(reangDekMarker, 'click', (function(marker) {
         return function() {
           infowindow.setContent("Reang Dek Village");
           infowindow.open(map, marker);
