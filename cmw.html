@@ -22,12 +22,12 @@
         map: map
       });
 
-      google.maps.event.addListener(reangDekMarker, 'click', (function(marker) {
+      google.maps.event.addListener(reangDekMarker, 'click', (function(reangDekMarker) {
         return function() {
           infowindow.setContent("Reang Dek Village");
-          infowindow.open(map, marker);
+          infowindow.open(map, reangDekMarker);
         }
-      })(marker));
+      })(reangDekMarker));
 
     </script>
     
