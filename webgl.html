@@ -128,10 +128,10 @@
           squareVertexPositionBuffer = gl.createBuffer();
           gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
           vertices = [
-               1.0,  1.0,  -2.0,
-              -1.0,  1.0,  -2.0,
-               1.0, -1.0,  -2.0,
-              -1.0, -1.0,  -2.0
+               1.0,  1.0,  0.0,
+              -1.0,  1.0,  0.0,
+               1.0, -1.0,  0.0,
+              -1.0, -1.0,  0.0
           ];
           gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
           squareVertexPositionBuffer.itemSize = 3;
@@ -154,7 +154,7 @@
           gl.drawArrays(gl.TRIANGLES, 0, triangleVertexPositionBuffer.numItems);
   
   
-          mat4.translate(mvMatrix, [3.0, 0.0, 0.0]);
+          mat4.translate(mvMatrix, [3.0, 0.0, -2.0]);
           gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
           gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
           setMatrixUniforms();
