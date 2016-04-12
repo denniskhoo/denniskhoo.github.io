@@ -188,6 +188,10 @@
         squareVertexColorBuffer.numItems = 4;
     }
 
+    function degToRad(degrees) {
+        return degrees * Math.PI / 180;
+    }
+    
     var rTri = 0;
     var rSquare = 0;
     function drawScene() {
@@ -231,24 +235,12 @@
         mvPopMatrix();
     }
 
-    function webGLStart() {
-        var canvas = document.getElementById("lesson01-canvas");
-        initGL(canvas);
-        initShaders();
-        initBuffers();
-
-        gl.clearColor(0.0, 0.0, 0.0, 1.0);
-        gl.enable(gl.DEPTH_TEST);
-
-        tick();
-    }
-    
     function tick() {
         requestAnimFrame(tick);
         drawScene();
         animate();
     }
-
+    
     var lastTime = 0;
     function animate() {
         var timeNow = new Date().getTime();
@@ -261,9 +253,23 @@
         lastTime = timeNow;
     }
     
-    function degToRad(degrees) {
-        return degrees * Math.PI / 180;
+    function webGLStart() {
+        var canvas = document.getElementById("lesson01-canvas");
+        initGL(canvas);
+        initShaders();
+        initBuffers();
+
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+        gl.enable(gl.DEPTH_TEST);
+
+        tick();
     }
+    
+    
+
+    
+    
+    
 </script>
 
 
